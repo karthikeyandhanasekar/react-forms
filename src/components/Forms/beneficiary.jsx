@@ -10,11 +10,11 @@ const Beneficiary = () => {
     const [phone, setphone] = React.useState('')
 
 
-    const form = useSelector(state => state.form)
+    const usertype = useSelector(state => state.toggleusertype)
+    console.log(usertype);
     const dispatch = useDispatch()
     const actions = bindActionCreators(actioncreators, dispatch)
 
-    console.log(form);
     const handlesubmit = (e) => {
         e.preventDefault()
         const form1 = {
@@ -22,11 +22,10 @@ const Beneficiary = () => {
             lastname: lastname,
             fullname: firstname + " " + lastname,
             email: email,
-            phone: phone
+            phone: phone,
+            accounttype: usertype
         }
         actions.adddetails(form1)
-
-
     }
     return (
         <form name='beneficiary-personal' onSubmit={handlesubmit} >

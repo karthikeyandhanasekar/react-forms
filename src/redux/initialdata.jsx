@@ -1,7 +1,6 @@
 
 
 export const inititaldata = {
-    form: {
-        
-    }
+    form: {},
+    usertype: 'personal'
 }

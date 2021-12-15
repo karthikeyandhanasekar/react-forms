@@ -1,8 +1,6 @@
 import { combineReducers } from "redux";
 import { inititaldata } from "./initialdata";
 
-
-
 const formreducers = (state = inititaldata.form, action) => {
     switch (action.type) {
         case "add":
@@ -24,8 +22,22 @@ const formreducers = (state = inititaldata.form, action) => {
     }
 }
 
+const usertypereducer  = (state = inititaldata.usertype,action) =>
+{
+    switch(action.type)
+    {
+        case "toggle":
+            {
+                state = action.data
+                return state
+            }
+        default :
+        return state
+    }
+}
 export const reducers = combineReducers(
     {
-        form: formreducers
+        forms: formreducers,
+        toggleusertype : usertypereducer
     }
 )

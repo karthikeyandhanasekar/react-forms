@@ -8,3 +8,13 @@ export const adddetails = (data) => {
     }
 
 }
+
+export const toggleusertype = (data) => {
+    return (dispatch) => {
+        dispatch({
+            type: "toggle",
+            data: data
+        })
+    }
+
+}
