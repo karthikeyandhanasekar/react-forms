@@ -17,50 +17,25 @@
     align-items   : center;
     padding       : 2%;
     border        : solid red;
-
-
 }
 
-.path,
 form,
 .category {
     width        : 70%;
     margin-bottom: 5%;
-
-}
-
-.path {
-    justify-content: space-between;
-}
-
-.path div {
-    text-align: center;
-    font-size : 1.5vw;
-}
-
-.path div :first-child {
-    display      : inline-block;
-    border       : groove;
-    border-radius: 50%;
-    font-size    : 2.5vw;
-    margin-bottom: 4%;
-    padding      : 5%
-}
-
-hr {
-    transform: rotate(90deg);
-    border   : groove;
 }
 
 form {
     padding: 2%;
 }
 
-input {
+input,
+select {
     border       : none;
     border-bottom: groove;
     font-size    : 1.5vw;
     width        : 100%;
+    background   : transparent;
 }
 
 input[type=submit] {
@@ -71,6 +46,12 @@ input[type=submit] {
     color           : #ffffff;
     cursor          : pointer;
 
+}
+
+input[type=radio] {
+    border: solid red;
+    width : 10%;
+    cursor: pointer;
 }
 
 .category {
@@ -88,4 +69,11 @@ input[type=submit] {
 
 .category :first-child {
     border-right: groove;
+}
+.data
+{
+    font-size: 2vw;
+    margin-bottom: 2%;
+    border-bottom: groove;
+    width: 100%;
 }
